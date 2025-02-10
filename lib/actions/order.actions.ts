@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-non-null-asserted-optional-chain */
 'use server';
 
 import { isRedirectError } from 'next/dist/client/components/redirect';
@@ -272,15 +271,14 @@ export async function getMyOrders({
   if (!session) throw new Error('User is not authorized');
 
   const data = await prisma.order.findMany({
-    // eslint-disable-next-line @typescript-eslint/no-non-null-asserted-optional-chain
-    where: { userId: session?.user?.id! },
+    where: { userId: session?.user?.id },
     orderBy: { createdAt: 'desc' },
     take: limit,
     skip: (page - 1) * limit,
   });
 
   const dataCount = await prisma.order.count({
-    where: { userId: session?.user?.id! },
+    where: { userId: session?.user?.id },
   });
 
   return {
