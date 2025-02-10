@@ -20,11 +20,11 @@ export const signUpDefaultValues = {
 };
 
 export const shippingAddressDefaultValues = {
-  fullName: 'John Doe',
-  streetAddress: '123 Main st',
-  city: 'Anytown',
-  postalCode: '12345',
-  country: 'USA',
+  fullName: '',
+  streetAddress: '',
+  city: '',
+  postalCode: '',
+  country: '',
 };
 
 export const PAYMENT_METHODS = process.env.PAYMENT_METHODS
@@ -34,3 +34,18 @@ export const DEFAULT_PAYMENT_METHOD =
   process.env.DEFAULT_PAYMENT_METHOD || 'PayPal';
 
 export const PAGE_SIZE = Number(process.env.PAGE_SIZE) || 12;
+
+export const productDefaultValues = {
+  name: '',
+  slug: '',
+  category: '',
+  images: [],
+  brand: '',
+  description: '',
+  price: '0',
+  stock: '0',
+  rating: '0',
+  numReviews: '0',
+  isFeatured: false,
+  banner: null,
+};
