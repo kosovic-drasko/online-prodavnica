@@ -32,10 +32,10 @@ const AddToCart = ({ cart, item }: { cart?: Cart; item: CartItem }) => {
         action: (
           <ToastAction
             className='bg-primary text-white hover:bg-gray-800'
-            altText='Go To Cart'
+            altText='Idi na korpu'
             onClick={() => router.push('/cart')}
           >
-            Go To Cart
+            Idi na korpu
           </ToastAction>
         ),
       });
